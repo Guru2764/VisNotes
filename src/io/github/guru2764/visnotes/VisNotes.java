@@ -5,7 +5,7 @@ import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
 
 //Main Plugin Class
-public final class VisNotes extends JavaPlugin
+public class VisNotes extends JavaPlugin
 {
 	//On Startup
     public void onEnable() {
