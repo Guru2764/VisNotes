@@ -1,21 +1,20 @@
-package io.github.guru2764.visedit;
+package io.github.guru2764.visnotes;
 
-import io.github.guru2764.visedit.CommandOperations;
-import io.github.guru2764.visedit.operations.RedoOperation;
-import io.github.guru2764.visedit.operations.SetOperation;
-import io.github.guru2764.visedit.operations.UndoOperation;
-import io.github.guru2764.visedit.blockdata.Validate;
+import io.github.guru2764.visnotes.operations.RedoOperation;
+import io.github.guru2764.visnotes.operations.SetOperation;
+import io.github.guru2764.visnotes.operations.UndoOperation;
+import io.github.guru2764.visnotes.blockdata.Validate;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class VisEditCommandExecutor implements CommandExecutor {
-  private final VisEdit plugin;
+public class VisNotesCommandExecutor implements CommandExecutor {
+  private final VisNotes plugin;
   
   //Gets plugin for use below
-  public VisEditCommandExecutor(VisEdit plugin) {
+  public VisNotesCommandExecutor(VisNotes plugin) {
     this.plugin = plugin;
   }
   

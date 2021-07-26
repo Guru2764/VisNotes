@@ -1,0 +1,21 @@
+main: io.github.guru2764.visnotes.VisNotes
+name: VisNotes
+version: '1.0'
+api-version: 1.15
+description: Guru's Second Plugin!
+author: Guru2764
+prefix: VisNotes
+commands:
+   vnote:
+      description: Creates timestamped note with message in file specified.
+      usage: /vnote [FileName] [Message]
+      permission: visnotes.note
+      permission-message: You don't have permission to use this command!
+permissions:
+    visnotes.*:
+        description: Gives access to all commands
+        children:
+            visnotes.note: true
+    visnotes.note:
+        description: Allows you to create a note
+        default: op

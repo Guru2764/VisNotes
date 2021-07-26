@@ -1,4 +1,4 @@
-package io.github.guru2764.visedit;
+package io.github.guru2764.visvisnotes;
 
 import io.github.guru2764.visedit.blockdata.DataSet;
 import io.github.guru2764.visedit.operations.RedoOperation;

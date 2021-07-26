@@ -1,4 +1,4 @@
-package io.github.guru2764.visedit.blockdata;
+package io.github.guru2764.visnotes.blockdata;
 
 import org.bukkit.block.Block;
 

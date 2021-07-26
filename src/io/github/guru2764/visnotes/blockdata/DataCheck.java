@@ -1,6 +1,6 @@
-package io.github.guru2764.visedit.blockdata;
+package io.github.guru2764.visnotes.blockdata;
 
-import io.github.guru2764.visedit.operations.SetOperation;
+import io.github.guru2764.visnotes.operations.SetOperation;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Axis;
 import org.bukkit.ChatColor;
