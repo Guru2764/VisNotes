@@ -1,6 +1,5 @@
 package io.github.guru2764.visnotes;
 
-import org.bukkit.command.CommandExecutor;
 import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -35,7 +34,7 @@ public class VisNotes extends JavaPlugin
         }
 
         //Initializes commands
-        this.getCommand("vnotes").setExecutor((CommandExecutor)new VisNotesCommandExecutor(this));
+        this.getCommand("vnote").setExecutor(new VisNotesCommandExecutor(this));
     }
     
     

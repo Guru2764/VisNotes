@@ -6,7 +6,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import java.io.*;
-import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -32,11 +31,16 @@ public class VisNotesCommandExecutor implements CommandExecutor {
                 return false;
             }
 
+            Bukkit.getLogger().info("1");
+
             //Correct Format Validation
             if(args[0].isBlank()||args[1].isBlank()) {
                 sender.sendMessage("You must not leave filename or message blank!");
                 return false;
             }
+
+            Bukkit.getLogger().info("2");
+
             String filename = args[0]+".txt";
             String message = args[1];
 
@@ -53,6 +57,8 @@ public class VisNotesCommandExecutor implements CommandExecutor {
                 }
             }
 
+            Bukkit.getLogger().info("3");
+
             try {
                 writer = new PrintWriter(new FileWriter(notesFile,true));
                 Date now = new Date();
@@ -63,9 +69,6 @@ public class VisNotesCommandExecutor implements CommandExecutor {
 
                 plugin.getLogger().info("Successfully wrote new line to "+filename+"!");
 
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                return false;
             } catch (IOException e) {
                 e.printStackTrace();
                 return false;
