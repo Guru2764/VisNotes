@@ -31,18 +31,17 @@ public class VisNotesCommandExecutor implements CommandExecutor {
                 return false;
             }
 
-            Bukkit.getLogger().info("1");
-
             //Correct Format Validation
             if(args[0].isBlank()||args[1].isBlank()) {
                 sender.sendMessage("You must not leave filename or message blank!");
                 return false;
             }
 
-            Bukkit.getLogger().info("2");
-
             String filename = args[0]+".txt";
-            String message = args[1];
+            String message = "";
+            for(int i=1;i<args.length;i++) {
+                message += (args[i]+" ");
+            }
 
             File notesFile = new File(plugin.getDataFolder() + "/notes/" + filename);
 
@@ -56,8 +55,6 @@ public class VisNotesCommandExecutor implements CommandExecutor {
                     return false;
                 }
             }
-
-            Bukkit.getLogger().info("3");
 
             try {
                 writer = new PrintWriter(new FileWriter(notesFile,true));
